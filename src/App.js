@@ -14,6 +14,7 @@ function App() {
 
   const AddNewExpenseHandler = (expense) => {
     expense.id = dummy_expenses.length + 1;
+
     setNewExpenses((prevExpenses) => {
       return [...prevExpenses, expense];
     });
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <div>
-      <NewExpense onAddNewExpense={AddNewExpenseHandler} />
+      <NewExpense onAddNewExpense={AddNewExpenseHandler}/>
       <Expenses item={expenses} />
     </div>
   );
