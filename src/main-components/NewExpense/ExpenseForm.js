@@ -21,6 +21,11 @@ const ExpenseForm = (props) => {
   //   enteredAmount: ''
   // });
 
+//  const hideFormHandler = () =>{
+//   let callBackFalse = false;
+//   props.OnhideFormHandler(callBackFalse);
+//  }
+
   const inputChangeHandler = (event) => {
     let date;
     let amount;
@@ -58,9 +63,9 @@ const ExpenseForm = (props) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler}> 
       <div className="new-expense__controls">
-        <div className="new-expense__control">
+      <div className="new-expense__control">
           <label>Your expense name</label>
           <input
             onChange={inputChangeHandler}
@@ -90,6 +95,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button onClick = {props.OnhideFormHandler}>Cancel</button>
         <button type="submit">Add new expense</button>
       </div>
     </form>

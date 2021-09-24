@@ -16,8 +16,6 @@ let Expenses = (props) => {
     return expense.date.getFullYear() == selectedYear;
   });
 
-  console.log(filteredExpensesList);
-
   let expensesContainer = <p className="expenses_abcense">No expenses found!</p>;
 
   if (filteredExpensesList.length > 0) {
