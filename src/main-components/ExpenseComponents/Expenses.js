@@ -3,6 +3,7 @@ import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
 import ExpenseFilter from "./ExpenseFilter";
 import Card from "../StylingComponents/Card";
+import ExpenseChart from './ExpenseChart';
 
 let Expenses = (props) => {
   let [selectedYear, getThisYear] = useState(`${new Date().getFullYear()}`);
@@ -32,6 +33,7 @@ let Expenses = (props) => {
   return (
     <div>
       <Card>
+        <ExpenseChart expenses={filteredExpensesList} />
         <ExpenseFilter
           selected={selectedYear}
           onSelectingYear={showSelectedYear}
